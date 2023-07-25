@@ -9,10 +9,18 @@
     - invoke the function "swap"
 */
 
-function swap(x, y){
+function swap(x, y){ 
     // Task 1: Add code here
+    x = x + y
+    y = x - y
+    x = x - y
+    console.log(
+        "x = " + x + ", y = " + y
+
+    )
 }
 
 // Task 2: Add code here
+swap(6,7)
 
 module.exports = swap;

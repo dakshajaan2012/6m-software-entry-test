@@ -18,6 +18,20 @@ class Parent{
             console.log(a);
         }
     }
+
+    addAbility(newAbility) {
+        this.abilities.push(newAbility);
+    }
+}
+
+class Child extends Parent {
+    constructor(){
+        super();
+    }
+
+    addNewAbilities(newAbility) {
+        super.addAbility(newAbility);
+    }
 }
 
 const p = new Parent();
@@ -26,5 +40,5 @@ p.showAbilities(); // Observe that this function prints "Parenting" and "Role mo
 // Task 1: Add code here
 
 const c = new Child();
-c.addNewAbility("Dancing");
+c.addNewAbilities("Dancing");
 c.showAbilities(); // This function should print "Parenting", "Role modeling" and "Dancing".
